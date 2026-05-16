@@ -1,12 +1,13 @@
 const axios = require("axios");
 const fs = require("fs-extra");
 const request = require("request");
+
 module.exports = {
 	config: {
 		name: "Out",
 		aliases: ["l"],
 		version: "1.0",
-		author: "Sandy",
+		author: "Efuu",
 		countDown: 5,
 		role: 2,
 		shortDescription: "bot will leave gc",
@@ -18,13 +19,25 @@ module.exports = {
 		}
 	},
 
-	onStart: async function ({ api,event,args, message }) {
- var id;
- if (!args.join(" ")) {
- id = event.threadID;
- } else {
- id = parseInt(args.join(" "));
- }
- return api.sendMessage('▣𝗔𝗬𝗔𝗡 𝗕𝗢𝗧 𝗟𝗘𝗔𝗩𝗘:\n》Mon succès est inévitable, car je suis destiné à être au sommet.\n\n➤𝗕𝗘𝗬 𝗟𝗘𝗦 𝗡𝗔𝗭𝗘𝗦', id, () => api.removeUserFromGroup(api.getCurrentUserID(), id))
+	onStart: async function ({ api, event, args, message }) {
+		var id;
+
+		if (!args.join(" ")) {
+			id = event.threadID;
+		} else {
+			id = parseInt(args.join(" "));
 		}
+
+		return api.sendMessage(
+			'╔═════ஜ۩۞۩ஜ═════╗\n' +
+			'         『 𝗘𝗙𝗨𝗨 𝗕𝗢𝗧 』\n' +
+			'╚═════ஜ۩۞۩ஜ═════╝\n\n' +
+			'➤ Bot is leaving this group...\n' +
+			'➤ Thanks for using EFUU BOT 💖\n\n' +
+			'━━━━━━━━━━━━━━━━━━\n' +
+			'      𝗕𝗬𝗘 𝗘𝗩𝗘𝗥𝗬𝗢𝗡𝗘 👋',
+			id,
+			() => api.removeUserFromGroup(api.getCurrentUserID(), id)
+		);
 	}
+}
