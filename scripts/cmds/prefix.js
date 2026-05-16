@@ -112,13 +112,16 @@ module.exports = {
 
     if (event.body && event.body.toLowerCase() === "prefix") {
       return message.reply({
-        body:
-          "╔══『 𝐏𝐑𝐄𝐅𝐈𝐗 』══╗\n"
-        + `║ 🌍 System : ${globalPrefix}\n`
-        + `║ 💬 Chatbox : ${threadPrefix}\n`
-        + `║ ➤ ${threadPrefix}help to see all available cmds 🥵\n`
-        + "╚═══════════════╝",
-        attachment: await utils.getStreamFromURL("https://files.catbox.moe/8ufjqu.jpg")
+body:
+  "╭───〔 𝐁𝐎𝐓 𝐈𝐍𝐅𝐎 〕───╮\n"
++ "│\n"
++ "│ 👑 Owner : Efat Ahmmed\n"
++ `│ 🌐 Prefix : ${threadPrefix}\n`
++ "│\n"
++ `│ ⚡ Type ${threadPrefix}help\n`
++ "│ 🎀 Enjoy The Bot\n"
++ "│\n"
++ "╰──────────────────╯",        attachment: await utils.getStreamFromURL("https://files.catbox.moe/8ufjqu.jpg")
       });
     }
   }
