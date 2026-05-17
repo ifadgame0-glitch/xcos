@@ -121,7 +121,7 @@ body:
 + `│ ⚡ Type ${threadPrefix}help\n`
 + "│ 🎀 Enjoy The Bot\n"
 + "│\n"
-+ "╰──────────────────╯",        attachment: await utils.getStreamFromURL("https://files.catbox.moe/8ufjqu.jpg")
++ "╰──────────────────╯",        attachment: await utils.getStreamFromURL("https://kommodo.ai/i/TRlGFfmtPoQt9Ir4kR62")
       });
     }
   }
