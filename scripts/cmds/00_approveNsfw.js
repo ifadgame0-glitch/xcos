@@ -46,7 +46,7 @@ module.exports = {
 			} else {
 				approvedIDs.splice(approvedIDs.indexOf(id), 1);
 				fs.writeFileSync(approvedIDsPath, JSON.stringify(approvedIDs));
-				api.sendMessage(`⚠️Warning ⚠️\nNow this Thread ID's permission has been disapproved or removed to use NSFW commands by BotAdmin.\n\nReason: ${reason}\nContact Loid Butter for more \nFB: https://www.facebook.com/profile.php?id=100082741664058`, id);
+				api.sendMessage(`⚠️Warning ⚠️\nNow this Thread ID's permission has been disapproved or removed to use NSFW commands by BotAdmin.\n\nReason: ${reason}\nContact Loid Butter for more \nFB: https://www.facebook.com/profile.php?id=61583133093928`,d);
 				message.reply("The thread ID has been removed from using NSFW commend");
 			}
 
